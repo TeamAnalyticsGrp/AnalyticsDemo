@@ -1,7 +1,9 @@
-import $ from 'jquery';
-import {} from 'popper.js';
-import 'bootstrap/dist/js/bootstrap'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+import 'jquery';
+import 'popper.js';
+import 'bootstrap/dist/js/bootstrap'
 
 import React from 'react';
 import ReactDOM from 'react-dom';
