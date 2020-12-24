@@ -14,16 +14,17 @@ class DataGrid extends Component {
 
   state = {
     skip: 0, take: 10,
-    filter: {
-      logic: "and",
-      filters: [
-        { field: "ProductName", operator: "contains", value: "Tea" }
-      ]
-    },
+    // filter: {
+    //   logic: "and",
+    //   filters: [
+    //     { field: "ProductName", operator: "contains", value: "Tea" }
+    //   ]
+    // },
     sort: [
       { field: 'ProductName', dir: 'asc' }
     ]
   }
+  
   pageChange = (event) => {
     this.setState({
       skip: event.page.skip,
@@ -56,7 +57,7 @@ class DataGrid extends Component {
             });
         }}
           onPageChange={this.pageChange}
-          style={{ height: "400px" }}>
+          style={{ height: "500px" }}>
           <GridColumn field="ProductName" title="Product Name" />
           <GridColumn field="UnitPrice" title="Price" format="{0:c}" />
           <GridColumn field="UnitsInStock" title="Units in Stock" />

@@ -8,11 +8,11 @@ import Footer from './Footer';
 class App extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <NavigationBar></NavigationBar>
         <DataGrid></DataGrid>
         <Footer></Footer>
-      </div>
+      </React.Fragment>
     )
   }
 }
