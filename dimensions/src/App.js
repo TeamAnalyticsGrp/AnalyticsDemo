@@ -13,6 +13,18 @@ class App extends Component {
         <DataGrid></DataGrid>
         <Footer></Footer>
       </React.Fragment>
+
+    //   <>
+    //      <NavigationBar></NavigationBar>
+    //      <DataGrid></DataGrid>
+    //      <Footer></Footer>
+    //   </>
+
+    //   <div>
+    //      <NavigationBar></NavigationBar>
+    //      <DataGrid></DataGrid>
+    //      <Footer></Footer>
+    //   </div>
     )
   }
 }
