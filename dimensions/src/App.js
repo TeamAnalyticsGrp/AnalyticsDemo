@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavigationBar from './NavigationBar';
-import DataGrid from './DataGrid';
-import Footer from './Footer';
+import NavigationBar from './components/NavigationBar';
+import DataGrid from './components/DataGrid';
+import Footer from './components/Footer';
 
 
 class App extends Component {
@@ -13,18 +13,6 @@ class App extends Component {
         <DataGrid></DataGrid>
         <Footer></Footer>
       </React.Fragment>
-
-    //   <>
-    //      <NavigationBar></NavigationBar>
-    //      <DataGrid></DataGrid>
-    //      <Footer></Footer>
-    //   </>
-
-    //   <div>
-    //      <NavigationBar></NavigationBar>
-    //      <DataGrid></DataGrid>
-    //      <Footer></Footer>
-    //   </div>
     )
   }
 }

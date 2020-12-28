@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import categories from './categories.json';
-import products from './products.json';
+import categories from '../categories.json';
+import products from '../products.json';
 import { process } from '@progress/kendo-data-query';
 import { Grid, GridColumn } from '@progress/kendo-react-grid';
 import { orderBy } from '@progress/kendo-data-query';
@@ -13,6 +13,7 @@ import '@progress/kendo-theme-default/dist/all.css';
 class DataGrid extends Component {
 
   state = {
+    products,
     skip: 0, take: 10,
     // filter: {
     //   logic: "and",
@@ -68,11 +69,19 @@ class DataGrid extends Component {
   }
 }
 
+
 class checkboxColumn extends Component {
+
+  onCheckBoxChange = (event) => {
+    console.log(event.target.checked, this.props.dataItem[this.props.field]);
+    //this.setState({ 'this.props.dataItem[this.props.field]': event.target.checked });
+    this.setState();
+  }
+
   render() {
     return (
       <td>
-        <input type="checkbox" checked={this.props.dataItem[this.props.field]} disabled="disabled" />
+        <input type="checkbox" checked={this.props.dataItem[this.props.field]} onChange={this.onCheckBoxChange} />
       </td>
     );
   }

@@ -1,6 +1,6 @@
-import './App.css';
+import '../App.css';
 import React, { Component } from 'react';
-import LogoFull from './logo/logo_full.png';
+import LogoFull from '../logo/logo_full.png';
 
 class NavigationBar extends Component {
     render() {
