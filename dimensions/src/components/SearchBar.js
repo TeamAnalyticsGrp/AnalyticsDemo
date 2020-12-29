@@ -7,7 +7,7 @@ class SearchBar extends Component {
     }
 
     handleSubmit = (event) => {
-        this.props.handleSearchClick(this.state.searchText);
+        this.props.handleSearchClick(event, this.state.searchText);
         event.preventDefault();
     }
 
@@ -26,7 +26,7 @@ class SearchBar extends Component {
                         placeholder={this.props.placeholderText}
                         value={this.state.searchText}
                         onChange={this.handleOnChange}
-                        required />
+                        required={this.props.required} />
                     <button className="btn btn-outline-success my-2 my-sm-0">
                         Search
                     </button>
