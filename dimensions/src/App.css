@@ -2,7 +2,7 @@
     text-align: right;
   }
 
-  .footer-padding {
+  .add-padding {
     padding: 5px;
     margin: auto;
   }
@@ -10,6 +10,19 @@
   .footer-logo {
     height: 35px;
     width: 40px;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;    
+    text-align: center;
   }
 
 

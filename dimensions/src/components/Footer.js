@@ -25,10 +25,8 @@ class Footer extends Component {
     }
 
     render() {
-
         return (
-
-            <div className="footer-padding bg-light row justify-content-between">
+            <div className="footer add-padding bg-light row justify-content-between">
                 <div ><img className="footer-logo" src={Logo} alt="Dimensions" /></div>
 
                 <form className="form-inline" onSubmit={this.handleSubmit}>

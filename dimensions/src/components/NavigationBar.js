@@ -1,5 +1,6 @@
 import '../App.css';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import LogoFull from '../logo/logo_full.png';
 
 class NavigationBar extends Component {
@@ -7,14 +8,18 @@ class NavigationBar extends Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light footer-padding">
 
-                <a className="navbar-brand" href="#" >
+                <a className="navbar-brand" href="/" >
                     <img src={LogoFull} width="auto" height="50px"></img>
                 </a>
 
                 <div className="collapse navbar-collapse" id="navbarId">
                     <div className="navbar-nav">
-                        <a className="nav-item nav-link active" href="#">Emails</a>
-                        <a className="nav-item nav-link" href="#">Donations</a>
+                        <Link className="nav-item nav-link active" to='/all-users'>
+                            All Users
+                        </Link>
+                        <Link className="nav-item nav-link" to='/user-repos-detail'>
+                            User Repos Detail
+                        </Link>                        
                     </div>
                 </div>
 
