@@ -3,7 +3,7 @@ import { Grid, GridColumn, GridColumnMenuFilter } from '@progress/kendo-react-gr
 import { orderBy } from '@progress/kendo-data-query';
 import { filterBy } from '@progress/kendo-data-query';
 import '@progress/kendo-theme-default/dist/all.css';
-//import CustomBooleanUiFilter from '../utils/CustomBooleanUiFilter';
+import CustomBooleanUiFilter from '../utils/CustomBooleanUiFilter';
 
 
 class UserDetailsGrid extends Component {
@@ -67,13 +67,13 @@ class UserDetailsGrid extends Component {
           <GridColumn field="private"
             title="Private Repo"
             filter={'boolean'}
-          // columnMenu={
-          //   props =>
-          //     <GridColumnMenuFilter
-          //       {...props}
-          //       filterUI={CustomBooleanUiFilter}
-          //     />
-          //  }
+          columnMenu={
+            props =>
+              <GridColumnMenuFilter
+                {...props}
+                filterUI={CustomBooleanUiFilter}
+              />
+           }
           />
           <GridColumn field="language" title="Language" />
           {/* <GridColumn field="created_at" title="Created" filter={'date'} format='{0:"g"}' /> */}

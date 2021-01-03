@@ -22,7 +22,7 @@ class UserReposDetail extends Component {
       .then((value) => {
         data = value.data;
         this.setState({ filteredData: value.data });
-        this.setState({ key: ++this.state.key });
+        this.setState({ key: this.state.key + 1 });
       });
   }
 
@@ -36,14 +36,14 @@ class UserReposDetail extends Component {
     let filteredData = [];
     if (!_.isEmpty(searchText)) {
       filteredData = _.filter(data, (repos) => {
-        return _.includes(`${repos.name}`, `${searchText}`);
+        return _.includes(`${_.toLower(repos.name)}`, `${_.toLower(searchText)}`);
       });
     } else {
       filteredData = data;
     }
 
     this.setState({ filteredData: filteredData });
-    this.setState({ key: ++this.state.key });
+    this.setState({ key: this.state.key + 1 });
     event.preventDefault();
   }
 

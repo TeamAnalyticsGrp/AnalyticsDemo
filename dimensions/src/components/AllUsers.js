@@ -17,7 +17,7 @@ class AllUsers extends Component {
                 data = value.data;
 
                 this.setState({ filteredData: value.data });
-                this.setState({ key: ++this.state.key });
+                this.setState({ key: this.state.key + 1 });
             });
     }
 
@@ -30,14 +30,14 @@ class AllUsers extends Component {
         let filteredData = [];
         if (!_.isEmpty(searchText)) {
             filteredData = _.filter(data, (user) => {
-                return _.includes(`${user.login}`, `${searchText}`);
+                return _.includes(`${_.toLower(user.login)}`, `${_.toLower(searchText)}`);
             });
         } else {
             filteredData = data;
         }
 
         this.setState({ filteredData: filteredData });
-        this.setState({ key: ++this.state.key });
+        this.setState({ key: this.state.key + 1 });
         event.preventDefault();
     }
 
