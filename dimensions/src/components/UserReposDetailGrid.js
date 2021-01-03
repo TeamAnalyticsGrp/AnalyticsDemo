@@ -42,8 +42,9 @@ class UserDetailsGrid extends Component {
           take={this.state.take}
           total={this.state.data.length}
           pageable={true}
-          //groupable={true}
+          groupable={true}
           sortable={true}
+          editable={true}
           sort={this.state.sort}
           filterable={true}
           filter={this.state.filter}
@@ -62,7 +63,7 @@ class UserDetailsGrid extends Component {
           // expandField="expanded"
           style={{ height: "500px" }}>
           <GridColumn field="name" title="Name" />
-          <GridColumn field="description" title="Description" />
+          <GridColumn field="description" title="Description" editable={true} />
           <GridColumn field="private"
             title="Private Repo"
             filter={'boolean'}

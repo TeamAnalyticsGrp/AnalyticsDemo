@@ -12,7 +12,7 @@ class AllUsers extends Component {
     }
 
     getData = () => {
-        axios.get('https://api.github.com/users?since=13500')
+        axios.get(`https://api.github.com/users?since=${Math.floor((Math.random() * 1000000) + 10000)}`)
             .then((value) => {
                 data = value.data;
 
@@ -35,8 +35,6 @@ class AllUsers extends Component {
         } else {
             filteredData = data;
         }
-
-        //console.log('data', data, 'filtereddata', this.state.filteredData);
 
         this.setState({ filteredData: filteredData });
         this.setState({ key: ++this.state.key });
