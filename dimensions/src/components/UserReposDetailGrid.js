@@ -76,7 +76,7 @@ class UserDetailsGrid extends Component {
            }
           />
           <GridColumn field="language" title="Language" />
-          {/* <GridColumn field="created_at" title="Created" filter={'date'} format='{0:"g"}' /> */}
+          <GridColumn field="created_at" title="Created" filter={'date'} format='{0:"g"}' />
         </Grid>
       </div>
     );

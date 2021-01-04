@@ -8,9 +8,9 @@ class NavigationBar extends Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light footer-padding">
 
-                <a className="navbar-brand" href="/" >
+                <Link className="navbar-brand" to="/" >
                     <img src={LogoFull} width="auto" height="50px"></img>
-                </a>
+                </Link>
 
                 <div className="collapse navbar-collapse" id="navbarId">
                     <div className="navbar-nav">
